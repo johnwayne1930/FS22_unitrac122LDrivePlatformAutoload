@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="64">
+
+    <author>johnwayne1930</author>
+    <version>1.0.0.1</version>
+	
+    <title>
+        <en>Lindner Unitrac Platform Autoload</en>
+        <de>Lindner Unitrac Plattform Autoloader</de>
+    </title>
+	
+    <description>
+        <en><![CDATA[
+Unitrac 122 LDrive Platform with autoload for pallets, round- and squarebales:
+FS22 Pallet Autoloader Specialization is required to make the autoload work!
+Lindner Unitrac Pack is also mandatory!
+
+Price: 2,500€
+Capacity: 2000l (config without autoload)
+
+Changelog:
+1.0.0.1
+- file optimization
+- minor i3D adjustments
+
+]]></en>
+        <de><![CDATA[
+Unitrac 122 LDrive Plattform mit Autoloader für Paletten, Rund- und Quaderballen:
+FS22 Paletten Autoloader Spezialisierung ist erforderlich, damit der Autoload funktioniert!
+Lindner Unitrac Pack wird ebenfalls zwingend benötigt!
+
+Preis: 2.500€
+Kapazität: 2000l (Konfiguration ohne Autoloader)
+
+Changelog:
+1.0.0.1
+- Dateioptimierung
+- Kleinere i3D Anpassungen 
+]]></de>
+    </description>
+	
+	<dependencies>
+		<dependency>FS22_aPalletAutoLoader</dependency>
+		<dependency>FS22_lindnerUnitrac122LDrive</dependency>
+	</dependencies>
+	
+    <iconFilename>icon_unitrac122LDrivePlatform.dds</iconFilename>
+    <multiplayer supported="true" />
+
+    <storeItems>
+        <storeItem xmlFilename="unitrac122LDrivePlatform/unitrac122LDrivePlatform.xml" />
+    </storeItems>
+
+    <brandColors>
+        <color name="LUOND_GREEN1" value="0.009 0.202 0.02 0" />
+        <color name="LUOND_RED1" value="0.8 0 0 1" />
+    </brandColors>
+
+     <l10n>
+        <text name="configuration_valuePlatform">
+            <en>Platform</en>
+            <de>Plattform</de>
+            <es>Plataforma</es>
+            <fr>Plateau</fr>
+            <it>Piattaforma</it>
+            <br>Plataforma</br>
+            <cs>平台</cs>
+            <ct>平台</ct>
+            <cz>Plošina</cz>
+            <ea>Plataforma</ea>
+            <hu>Platform</hu>
+            <jp>プラットフォーム</jp>
+            <kr>평판</kr>
+            <pl>Platforma</pl>
+            <nl>Platform</nl>
+            <pt>Plataforma</pt>
+            <ro>Platformă</ro>
+            <ru>Платформа</ru>
+            <tr>Platform</tr>
+        </text>
+        <text name="configuration_valuePlatformBackHitch">
+            <en>Platform + 3-Point</en>
+            <de>Plattform + 3-Punkt</de>
+            <es>Plataforma y enganche de 3 puntos</es>
+            <fr>Plateau + 3 points</fr>
+            <it>Piattaforma + 3 punti</it>
+            <br>Plataforma + engate de 3 pontas</br>
+            <cs>平台 + 三点式</cs>
+            <ct>平台 + 三點式</ct>
+            <cz>Plošina + tříbodový závěs</cz>
+            <ea>Plataforma + 3 puntos</ea>
+            <hu>Platform + 3 pontos felfüggesztés</hu>
+            <jp>プラットフォーム + 3点ヒッチ</jp>
+            <kr>평판 + 3점</kr>
+            <pl>Platforma + TUZ</pl>
+            <nl>Platform + driepuntsophanging</nl>
+            <pt>Plataforma +3 pontos</pt>
+            <ro>Platformă + 3 puncte</ro>
+            <ru>Платформа + 3 точки</ru>
+            <tr>Platform + 3 Noktalı</tr>
+        </text>
+        <text name="configuration_valueOnlyBackHitch">
+            <en>Only 3-Point Hitch</en>
+            <de>Nur 3-Punkt Anbau</de>
+            <es>Solo enganche de 3 puntos</es>
+            <fr>Attache 3 points seule</fr>
+            <it>Solo attacco a 3 punti</it>
+            <br>Só engate de 3 pontas</br>
+            <cs>仅三点式联结器</cs>
+            <ct>僅限三點配掛式</ct>
+            <cz>Jen tříbodový závěs</cz>
+            <ea>Solo enganche de 3 puntos</ea>
+            <hu>Csak 3 pontos felfüggesztés</hu>
+            <jp>3点ヒッチのみ</jp>
+            <kr>3점 연결부</kr>
+            <pl>Tylko zaczep TUZ</pl>
+            <nl>Alleen driepuntsophanging</nl>
+            <pt>Engate de apenas 3 pontos</pt>
+            <ro>Doar cuplă 3 puncte</ro>
+            <ru>Только 3 точки</ru>
+            <tr>Yalnızca 3 Noktalı Ek Parça</tr>
+        </text>		
+		<text name="configuration_aPalletAutoloader_active">
+			<en>AL: Tension belts</en>
+			<de>AL: Spanngurte</de>
+		</text>
+		<text name="configuration_tensionBelt_on">
+			<en>Automatic</en>
+			<de>Automatisch</de>
+		</text>
+		<text name="configuration_tensionBelt_off">
+			<en>Manually</en>
+			<de>Manuell</de>
+		</text>
+     </l10n>
+	 
+	<vehicleTypes>
+		<type name="PalletAutoLoaderTrailer" parent="trailer" filename="$dataS/scripts/vehicles/Vehicle.lua">
+			<specialization name="FS22_aPalletAutoLoader.aPalletAutoLoader"/>
+		</type>
+	</vehicleTypes>	
+</modDesc>

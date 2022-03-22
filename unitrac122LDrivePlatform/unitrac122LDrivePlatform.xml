@@ -1,0 +1,604 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="PalletAutoLoaderTrailer" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://validation.gdn.giants-software.com/xml/fs22/vehicle.xsd">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>Platform Autoload</name>
+        <functions>
+            <function>$l10n_function_tipper</function>
+        </functions>
+        <image>unitrac122LDrivePlatform/store_unitrac122LDrivePlatform.png</image>
+        <price>2500</price>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>LINDNER</brand>
+        <category>misc</category>
+        <shopHeight>4</shopHeight>
+        <shopTranslationOffset>0 0.135 0</shopTranslationOffset>
+        <shopRotationOffset>0 0 0</shopRotationOffset>
+        <vertexBufferMemoryUsage>959232</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>163584</indexBufferMemoryUsage>
+        <textureMemoryUsage>3014656</textureMemoryUsage>
+        <audioMemoryUsage>0</audioMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <base>
+        <typeDesc>$l10n_typeDesc_tipper</typeDesc>
+        <filename>unitrac122LDrivePlatform/unitrac122LDrivePlatform.i3d</filename>
+        <size width="4.0" length="3.7" lengthOffset="-0.05" height="2.7"/>
+        <components>
+            <component centerOfMass="0 0.5 0" solverIterationCount="20" mass="850" />
+        </components>
+        <schemaOverlay attacherJointPosition="0 0" name="IMPLEMENT" />
+    </base>
+
+    <configurationSets title="$l10n_configuration_extension">
+		<!-- config autoload -->
+        <configurationSet name="$l10n_configuration_valuePlatform" isDefault="true">
+            <configuration name="inputAttacherJoint" index="1" />
+            <configuration name="attacherJoint"      index="1" />
+            <configuration name="tensionBelts"       index="2" />
+            <configuration name="fillUnit"           index="1" />
+            <configuration name="fillVolume"         index="1" />
+            <configuration name="trailer"            index="3" />
+            <configuration name="folding"            index="2" />
+            <configuration name="dischargeable"      index="2" />            
+			<!-- <configuration name="aPalletAutoLoader"  index="1" /> -->
+        </configurationSet>
+		<!-- config autoload -->
+        <configurationSet name="$l10n_configuration_valuePlatformBackHitch">
+            <configuration name="inputAttacherJoint" index="2" />
+            <configuration name="attacherJoint"      index="2" />
+            <configuration name="tensionBelts"       index="2" />
+            <configuration name="fillUnit"           index="1" />
+            <configuration name="fillVolume"         index="1" />
+            <configuration name="trailer"            index="3" />
+            <configuration name="folding"            index="2" />
+            <configuration name="dischargeable"      index="2" /> 
+			<!-- <configuration name="aPalletAutoLoader"  index="1" /> -->
+        </configurationSet>
+        <configurationSet name="$l10n_configuration_valuePlatform">
+            <configuration name="inputAttacherJoint" index="1" />
+            <configuration name="attacherJoint"      index="1" />
+            <configuration name="tensionBelts"       index="2" />
+            <configuration name="fillUnit"           index="2" />
+            <configuration name="fillVolume"         index="2" />
+            <configuration name="trailer"            index="2" />
+            <configuration name="folding"            index="2" />
+            <configuration name="dischargeable"      index="1" /> 
+			<configuration name="aPalletAutoLoader"  index="3" />
+        </configurationSet>
+        <configurationSet name="$l10n_configuration_valuePlatformBackHitch">
+            <configuration name="inputAttacherJoint" index="2" />
+            <configuration name="attacherJoint"      index="2" />
+            <configuration name="tensionBelts"       index="2" />
+            <configuration name="fillUnit"           index="2" />
+            <configuration name="fillVolume"         index="2" />
+            <configuration name="trailer"            index="2" />
+            <configuration name="folding"            index="2" />
+            <configuration name="dischargeable"      index="1" /> 
+			<configuration name="aPalletAutoLoader"  index="3" />
+        </configurationSet>
+        <configurationSet name="$l10n_configuration_valueOnlyBackHitch">
+            <configuration name="inputAttacherJoint" index="2" />
+            <configuration name="attacherJoint"      index="2" />
+            <configuration name="tensionBelts"       index="1" />
+            <configuration name="fillUnit"           index="1" />
+            <configuration name="fillVolume"         index="1" />
+            <configuration name="trailer"            index="1" />
+            <configuration name="folding"            index="1" />
+            <configuration name="dischargeable"      index="2" /> 
+			<configuration name="aPalletAutoLoader"  index="3" />
+        </configurationSet>
+    </configurationSets>
+
+	<aPalletAutoLoader>
+		<aPalletAutoLoaderConfigurations title="$l10n_configuration_aPalletAutoloader_active">
+			<aPalletAutoLoaderConfiguration name="$l10n_configuration_tensionBelt_on" maxObjects="9" maxMass="9" useBales="true" useTensionBelts="true" supportedObject="data/objects/pallets">
+				<trigger node="triggerNode"/>
+				<pickupTriggers>
+					<pickupTrigger node="pickupTriggerLeft"/>
+					<pickupTrigger node="pickupTriggerRight"/>
+				</pickupTriggers>
+                <loadArea baseNode="loadingBase" leftRightCornerOffset="0.8 0 0" lenght="2.7" width="1.6" height="2.5"/>
+			</aPalletAutoLoaderConfiguration>
+			
+			<aPalletAutoLoaderConfiguration name="$l10n_configuration_tensionBelt_off" maxObjects="9" maxMass="9" useBales="true" useTensionBelts="false" supportedObject="data/objects/pallets">
+				<trigger node="triggerNode"/>
+				<pickupTriggers>
+					<pickupTrigger node="pickupTriggerLeft"/>
+					<pickupTrigger node="pickupTriggerRight"/>
+				</pickupTriggers>
+                <loadArea baseNode="loadingBase" leftRightCornerOffset="0.8 0 0" lenght="2.7" width="1.6" height="2.5"/>
+			</aPalletAutoLoaderConfiguration>
+			
+			<aPalletAutoLoaderConfiguration /> <!-- configuration for autoload off -->
+		</aPalletAutoLoaderConfigurations>
+	</aPalletAutoLoader>
+	
+    <attachable>
+        <inputAttacherJointConfigurations>
+            <inputAttacherJointConfiguration>
+                <inputAttacherJoint node="moduleJoint" jointType="implement" allowsLowering="false" lowerRotLimitScale="0 0 0" upperRotLimitScale="0 0 0" upperRotationOffset="0" lowerTransLimitScale="0 0 0" upperTransLimitScale="0 0 0">
+                    <distanceToGround lower="0.77" upper="0.77"/>
+                    <subType name="unitrac122LDrive" showWarning="false"/>
+                </inputAttacherJoint>
+            </inputAttacherJointConfiguration>
+            <inputAttacherJointConfiguration>
+                <inputAttacherJoint node="moduleJoint" jointType="implement" allowsLowering="false" lowerRotLimitScale="0 0 0" upperRotLimitScale="0 0 0" upperRotationOffset="0" lowerTransLimitScale="0 0 0" upperTransLimitScale="0 0 0">
+                    <distanceToGround lower="0.77" upper="0.77"/>
+                    <subType name="unitrac122LDriveCustomBumper" showWarning="false"/>
+                </inputAttacherJoint>
+            </inputAttacherJointConfiguration>
+        </inputAttacherJointConfigurations>
+
+        <inputAttacherJoints>
+        </inputAttacherJoints>
+        <support animationName="moveSupport" delayedOnAttach="false" detachAfterAnimation="false"/>
+    </attachable>
+
+    <attacherJoints comboDuration="2">
+        <attacherJointConfigurations>
+            <attacherJointConfiguration powerTakeOffConfigId="1">
+            </attacherJointConfiguration>
+            <attacherJointConfiguration price="5000" powerTakeOffConfigId="2">
+                <attacherJoint node="attacherJointBack" upperRotationOffset="-0.192" lowerRotationOffset="-0.192" moveTime="2.5" comboTime="0">
+                    <distanceToGround lower="0.25" upper="0.83" />
+                    <rotationNode node="attacherJointBackRot" lowerRotation="-15 0 0" upperRotation="26 0 0" />
+                    <rotationNode2 node="attacherJointBackRot2" />
+                    <bottomArm rotationNode="attacherJointBackArmBottom" translationNode="bottomLink" referenceNode="referencePointBackBottom" zScale="-1" startRotation="2.944 0 0"/>
+                    <topArm baseNode="attacherJointBackArmTop" filename="$data/shared/assets/upperLinks/walterscheid01.i3d" zScale="1" toggleVisibility="true"/>
+                    <schema position="1 0" rotation="0" invertX="false" />
+                </attacherJoint>
+                <objectChange node="attacherJointConfig" visibilityActive="true"  visibilityInactive="false"/>
+                <objectChange node="bumperCollision" compoundChildActive="true"  compoundChildInactive="false"/>
+            </attacherJointConfiguration>
+        </attacherJointConfigurations>
+        <sounds>
+            <attach template="ATTACH_01" volumeScale="0.7" pitchScale="1"/>
+            <hydraulic template="defaultHydraulicSound" volumeScale="1" pitchScale="0.8"/>
+        </sounds>
+    </attacherJoints>
+
+    <connectionHoses>
+        <target attacherJointIndices="1" type="electric" node="backElectric02" socket="electric"/>
+        <target attacherJointIndices="1" type="hydraulicIn" node="hydraulicIn08" socket="hydraulic02"/>
+        <target attacherJointIndices="1" type="hydraulicOut" node="hydraulicOut08" socket="hydraulic02"/>
+        <target attacherJointIndices="1" type="hydraulicIn" node="hydraulicIn09" socket="hydraulic02"/>
+        <target attacherJointIndices="1" type="hydraulicOut" node="hydraulicOut09" socket="hydraulic02"/>
+        <target attacherJointIndices="1" type="airDoubleYellow" node="air_yellow" socket="air_yellow"/>
+        <target attacherJointIndices="1" type="airDoubleRed" node="air_red" socket="air_red"/>
+    </connectionHoses>
+
+    <powerTakeOffs>
+        <powerTakeOffConfigurations>
+            <powerTakeOffConfiguration />
+            <powerTakeOffConfiguration>
+                <input inputAttacherJointIndices="1" inputNode="ptoInput" aboveAttacher="false"/>
+                <output attacherJointIndices="1" outputNode="ptoBack" />
+                <local startNode="ptoLocalStart" endNode="ptoLocalEnd" />
+            </powerTakeOffConfiguration>
+        </powerTakeOffConfigurations>
+    </powerTakeOffs>
+
+    <lights>
+        <sharedLight linkNode="redRound_02"  filename="$data/shared/assets/reflectors/lizard/redRound_01.xml" />
+        <sharedLight linkNode="redRound_03"  filename="$data/shared/assets/reflectors/lizard/redRound_01.xml" />
+
+        <realLights>
+            <low>
+                <light node="workLightBackLow" lightTypes="1"/>
+            </low>
+            <high>
+                <light node="backLightsHigh1" lightTypes="0"/>
+                <brakeLight node="backLightsHigh1" />
+                <turnLightLeft node="turnLightLeftBack" />
+                <turnLightRight node="turnLightRightBack" />
+                <reverseLight node="workLightBackHigh" />
+            </high>
+        </realLights>
+
+        <defaultLights>
+            <defaultLight shaderNode="backlightStatic" lightTypes="0" intensity="80"/>
+        </defaultLights>
+
+        <brakeLights>
+            <brakeLight shaderNode="backlightStatic" intensity="120"/>
+        </brakeLights>
+
+        <turnLights>
+            <turnLightLeft shaderNode="turnlightLeftStatic2" intensity="120"/>
+            <turnLightRight shaderNode="turnlightRightStatic2" intensity="120"/>
+        </turnLights>
+
+        <reverseLights>
+            <reverseLight shaderNode="reverseLightStatic" />
+        </reverseLights>
+
+        <beaconLights>
+            <beaconLight node="beacon_static" intensity="1000" multiBlink="true">
+                <realLight node="realLight01"/>
+                <device mode="DOUBLE_BLINK_TRIPLE_WAIT" rpm="100" numLEDScale="1" brightnessScale="1" />
+            </beaconLight>
+        </beaconLights>
+    </lights>
+
+    <tensionBelts>
+        <tensionBeltsConfigurations>
+            <tensionBeltsConfiguration>
+            </tensionBeltsConfiguration>
+            <tensionBeltsConfiguration>
+                <tensionBelts linkNode="tensionBelts" rootNode="unitrac112Platform_main_component1" jointNode="unitrac112Platform_main_component1" width="0.075" maxEdgeLength="0.1" geometryBias="0.01" ratchetPosition="0.2" defaultOffset="0" defaultOffsetSide="0.1" defaultHeight="3" interactionRadius="1.75" totalInteractionRadius="3.5" activationTrigger="beltActivationTrigger">
+                    <tensionBelt startNode="beltStart1" endNode="beltEnd1" offsetLeft="0.85"/>
+                    <tensionBelt startNode="beltStart2" endNode="beltEnd2" offsetRight="0.85"/>
+                    <sounds>
+                        <addBelt    template="beltOpen" />
+                        <removeBelt template="beltClose" />
+                    </sounds>
+                </tensionBelts>
+            </tensionBeltsConfiguration>
+        </tensionBeltsConfigurations>
+    </tensionBelts>
+
+    <foldable>
+        <foldingConfigurations>
+            <!-- fake folding configurations for deactivating moving tool -->
+            <foldingConfiguration>
+            </foldingConfiguration>
+            <foldingConfiguration>
+            </foldingConfiguration>
+        </foldingConfigurations>
+    </foldable>
+
+    <animations>
+         <animation name="moveSupport">
+            <part node="supportArmsLower" startTime="0.0" endTime="0.01" direction="1" startTrans="0 0.3 0" endTrans="0 0.15 0"/>
+            <part node="supportArmsLower" startTime="0.01" endTime="0.85" direction="1" startTrans="0 0.15 0" endTrans="0 0.05 0"/>
+            <part node="supportHandle01"  startTime="0.01" endTime="0.85" direction="1" startRot="0 0 0" endRot="0 -500 0"/>
+            <part node="supportHandle02"  startTime="0.01" endTime="0.85" direction="1" startRot="0 0 0" endRot="0 -500 0"/>
+            <part node="supportHandle03"  startTime="0.01" endTime="0.85" direction="1" startRot="0 0 0" endRot="0 -500 0"/>
+            <part node="supportHandle04"  startTime="0.01" endTime="0.85" direction="1" startRot="0 0 0" endRot="0 -500 0"/>
+
+            <part node="supportArmsLower" startTime="0.50" endTime="0.85" direction="-1" startTrans="0 0.3 0" endTrans="0 0.05 0"/>
+            <part node="supportHandle01"  startTime="0.50" endTime="0.85" direction="-1" startRot="0 0 0" endRot="0 -500 0"/>
+            <part node="supportHandle02"  startTime="0.50" endTime="0.85" direction="-1" startRot="0 0 0" endRot="0 -500 0"/>
+            <part node="supportHandle03"  startTime="0.50" endTime="0.85" direction="-1" startRot="0 0 0" endRot="0 -500 0"/>
+            <part node="supportHandle04"  startTime="0.50" endTime="0.85" direction="-1" startRot="0 0 0" endRot="0 -500 0"/>
+
+            <part node="supportCol01" startTime="0" endTime="0.01" startTrans="0.0 0.126 1.018" endTrans="0 -0.03 0" startRot="90 0 0" endRot="0 0 0"/>
+            <part node="supportCol02" startTime="0" endTime="0.01" startTrans="1.365 0.212 0.0" endTrans="0 -0.03 0" startRot="0 0 -90" endRot="0 0 0"/>
+            <part node="supportCol03" startTime="0" endTime="0.01" startTrans="-1.365 0.212 0.0" endTrans="0 -0.03 0" startRot="0 0 90" endRot="0 0 0"/>
+
+            <part node="supportCol01" startTime="0.01" endTime="0.85" startTrans="0 -0.03 0" endTrans="0 0 0" />
+            <part node="supportCol02" startTime="0.01" endTime="0.85" startTrans="0 -0.03 0" endTrans="0 0 0"  />
+            <part node="supportCol03" startTime="0.01" endTime="0.85" startTrans="0 -0.03 0" endTrans="0 0 0" />
+
+            <part node="supportArms"    startTime="0" endTime="0.02" visibility="false" />
+            <part node="supportArms"    startTime="0.02" endTime="0.25" visibility="true" />
+
+            <part node="additionalHoses"    startTime="0" endTime="0.02" visibility="true" />
+            <part node="additionalHoses"    startTime="0.02" endTime="0.25" visibility="false" />
+
+            <part startTime="0" endTime="0.01" direction="1" requiredAnimation="sideDoorAnim" requiredAnimationRange="0.63 1" dependentAnimation="sideDoorAnim" dependentAnimationStartTime="1"   dependentAnimationEndTime="0.63"/>
+
+            <sound template="slideOpen"     startTime="0.01" endTime="0.89" direction="1"     volumeScale="2.1" pitchScale="0.8" />
+            <sound template="slideOpen"     startTime="0.5"  endTime="0.89" direction="-1"    volumeScale="2.1" pitchScale="0.8" />
+            <sound template="clackVar6"     startTime="0.6"  direction="-1" volumeScale="1.2" pitchScale="0.8"/>
+            <sound template="cylinderPunch" startTime="0.6"  direction="-1" volumeScale="0.3" pitchScale="2"/>
+         </animation>
+        <animation name="sideDoorAnim">
+            <part node="doorLeft"           startTime="0" endTime="2" startRot="0 0 0" endRot="0 0 -150" />
+            <part node="doorRight"          startTime="0" endTime="2" startRot="0 0 0" endRot="0 0 150" />
+            <part node="exactFillRootNode"  startTime="0" endTime="0.01" startTrans="0 1.534 0.163" endTrans="0 40 0.163" />
+
+            <sound template="hingeMedium"   startTime="0.01" endTime="1.99" volumeScale="1"   pitchScale="0.6"/>
+            <sound template="clackVar6"     startTime="1.99" direction="1"  volumeScale="1"   pitchScale="0.8"/>
+            <sound template="sheetImp02"    startTime="1.99" direction="1"  volumeScale="0.7" pitchScale="1.5"/>
+            <sound template="sheetImp02"    startTime="0.01" direction="-1" volumeScale="0.7" pitchScale="1.5"/>
+            <sound template="clackVar6"     startTime="0.01" direction="-1" volumeScale="1"   pitchScale="0.8"/>
+            <sound template="cylinderPunch" startTime="0.01" direction="-1" volumeScale="0.4" pitchScale="3"/>
+        </animation>
+        <animation name="tipAnimationBack">
+            <part node="doorBackHook01"     startTime="0" endTime="0.2"   startRot="0 0 0" endRot="20 0 0" />
+            <part node="doorBackHook02"     startTime="0" endTime="0.2"   startRot="0 0 0" endRot="-110 0 0" />
+            <part node="doorBackHook01"     startTime="0.2" endTime="0.4"   startRot="20 0 0" endRot="0 0 0" />
+            <part node="doorBackHook02"     startTime="0.2" endTime="0.4"   startRot="-110 0 0" endRot="-110 0 0" />
+            <part node="doorBack"           startTime="0.2" endTime="0.75" startRot="0 0 0" endRot="-172 0 0" />
+            <part node="doorBack"           startTime="1" endTime="3" startRot="-172 0 0" endRot="-142 0 0" />
+            <part node="platform"           startTime="1" endTime="3" startRot="0 0 0" endRot="-30 0 0" />
+            <part node="effectJointAnim"    startTime="1" endTime="3" startRot="0 0 0" endRot="30 0 0" />
+
+            <sound template="metalOpen"     startTime="0.2"  direction="1"  volumeScale="1.2" pitchScale="1.9" linkNode="doorBack"/>
+            <sound template="sheetImp02"    startTime="0.3"  direction="1"  volumeScale="0.8" pitchScale="1.2" linkNode="doorBack"/>
+            <sound template="clackVar4"     startTime="0.01" direction="1"  volumeScale="0.8" pitchScale="1.5" linkNode="doorBack"/>
+            <sound template="clackVar4"     startTime="0.2"  direction="-1" volumeScale="0.8" pitchScale="1.5" linkNode="doorBack"/>
+            <sound template="clackVar6"     startTime="2.99" direction="1"  volumeScale="1"   pitchScale="0.8"/>
+            <sound template="cylinderPunch" startTime="2.99" direction="1"  volumeScale="0.5" pitchScale="2"/>
+            <sound template="cylinderPunch" startTime="2.99" direction="-1" volumeScale="0.4" pitchScale="2"/>
+            <sound template="cylinderPunch" startTime="1"    direction="-1" volumeScale="0.4" pitchScale="1.6"/>
+            <sound template="metalClose"    startTime="1"    direction="-1" volumeScale="0.4" pitchScale="1.6"/>
+            <sound template="clackVar6"     startTime="0.7"  direction="1"  volumeScale="0.7" pitchScale="0.9"/>
+            <sound template="sheetImp02"    startTime="0.7"  direction="1"  volumeScale="1"   pitchScale="1.4"/>
+            <sound template="clackVar6"     startTime="1"    direction="-1" volumeScale="1"   pitchScale="0.7"/>
+            <sound template="sheetImp02"    startTime="1"    direction="-1" volumeScale="2"   pitchScale="0.7"/>
+            <sound template="thudVar2"      startTime="1"    direction="1" volumeScale="2"   pitchScale="1.3"/>
+            <sound template="hingeMedium"   startTime="0.3"  endTime="0.8"  direction="-1"    volumeScale="1" pitchScale="0.7"/>
+            <sound template="clackVar6"     startTime="0.25" direction="-1" volumeScale="0.8" pitchScale="0.9"/>
+            <sound template="cylinderPunch" startTime="0.25" direction="-1" volumeScale="0.3" pitchScale="2"/>
+        </animation>
+    </animations>
+
+    <cylindered>
+        <movingTools>
+            <movingTool node="doorLeft" playSound="false" foldingConfigurationIndex="2" fillUnitIndex="1" minFillLevel="0" maxFillLevel="0">
+                <controls axis="AXIS_CRANE_ARM" invertAxis="false" mouseSpeedFactor="0.3" iconName="TOP_DOOR_ROTATE" />
+                <animation animSpeed="0.5" animAcceleration="5" animName="sideDoorAnim" />
+            </movingTool>
+            <movingTool node="platform" playSound="true">
+                <dependentPart node="platformHydraulic02"/>
+            </movingTool>
+            <movingTool node="attacherJointBackArmBottom">
+                <dependentPart node="bottomLinkHydraulic" />
+            </movingTool>
+        </movingTools>
+
+        <movingParts>
+            <movingPart node="platformHydraulic02" referencePoint="platformHydraulicRef" referenceFrame="platformHydraulicRef" divideTranslatingDistance="false">
+                <translatingPart node="platformHydraulic03" maxZTrans="0.25"/>
+                <translatingPart node="platformHydraulic04" maxZTrans="0.25"/>
+                <translatingPart node="platformHydraulic05" maxZTrans="0.25"/>
+            </movingPart>
+            <movingPart node="bottomLinkHydraulic" referencePoint="bottomLinkHydraulicRef" referenceFrame="bottomLinkHydraulicRef">
+                <translatingPart node="bottomLinkHydraulicPunch" />
+            </movingPart>
+        </movingParts>
+         <sounds>
+            <actionSound template="defaultHydraulicSound" pitchScale="0.5" volumeScale="2.2" linkNode="platformHydraulic02" actionNames="TRANSLATING_POS"     nodes="platformHydraulic02"/>
+            <actionSound template="defaultHydraulicSound" pitchScale="0.5" volumeScale="0.7" linkNode="platformHydraulic02" actionNames="TRANSLATING_NEG"     nodes="platformHydraulic02"/>
+            <actionSound template="cylinderPunch"         pitchScale="1.7"                   linkNode="platformHydraulic02" actionNames="TRANSLATING_END_NEG" nodes="platformHydraulic04"/>
+            <actionSound template="cylinderPunch"         pitchScale="1.7"                   linkNode="platformHydraulic02" actionNames="TRANSLATING_END_NEG" nodes="platformHydraulic05"/>
+        </sounds>
+    </cylindered>
+
+    <fillUnit>
+        <fillUnitConfigurations>
+            <fillUnitConfiguration>
+                <fillUnits>
+                    <!-- fake fill unit for dischargeable -->
+                    <fillUnit unitTextOverride="$l10n_unit_literShort" fillTypes="AIR" capacity="0" showInShop="false" showOnHud="false"/>
+                </fillUnits>
+            </fillUnitConfiguration>
+            <fillUnitConfiguration>
+                <fillUnits>
+                    <fillUnit unitTextOverride="$l10n_unit_literShort" fillTypeCategories="bulk" capacity="2000" fillAnimation="sideDoorAnim" fillAnimationLoadTime="0">
+                        <exactFillRootNode node="exactFillRootNode"/>
+                        <autoAimTargetNode node="autoAimTargetNode" startZ="0.7" endZ="-0.4" invert="false" startPercentage="25"/>
+                    </fillUnit>
+                </fillUnits>
+            </fillUnitConfiguration>
+        </fillUnitConfigurations>
+    </fillUnit>
+
+    <fillVolume>
+        <fillVolumeConfigurations>
+            <fillVolumeConfiguration>
+                <volumes>
+                </volumes>
+            </fillVolumeConfiguration>
+            <fillVolumeConfiguration>
+                <volumes>
+                    <volume node="fillVolume" maxDelta="0.23" maxAllowedHeapAngle="18" fillUnitIndex="1" />
+                </volumes>
+            </fillVolumeConfiguration>
+        </fillVolumeConfigurations>
+
+        <unloadInfos>
+            <unloadInfo>
+                <node node="unloadInfo" width="0.4" length="0.4" />
+            </unloadInfo>
+        </unloadInfos>
+    </fillVolume>
+
+    <trailer>
+        <trailerConfigurations>
+            <trailerConfiguration>
+                <trailer>
+                </trailer>
+            </trailerConfiguration>
+            <trailerConfiguration price="3500">
+                <trailer>
+                    <tipSide name="$l10n_info_tipSideBack" dischargeNodeIndex="1">
+                        <animation name="tipAnimationBack" speedScale="0.6" startTipTime="0.25"/>
+                    </tipSide>
+                </trailer>
+                <objectChange node="platformConfig" visibilityActive="true"  visibilityInactive="false"/>
+                <objectChange node="platformHoses" visibilityActive="true"  visibilityInactive="false"/>
+                <objectChange node="platformCollision01" compoundChildActive="true"  compoundChildInactive="false"/>
+                <objectChange node="platformCollision02" compoundChildActive="true"  compoundChildInactive="false"/>
+                <objectChange node="platformCollision03" compoundChildActive="true"  compoundChildInactive="false"/>
+                <objectChange node="platformCollision04" compoundChildActive="true"  compoundChildInactive="false"/>
+                <objectChange node="platformCollision05" compoundChildActive="true"  compoundChildInactive="false"/>
+            </trailerConfiguration>
+			<!-- config autoload -->
+            <trailerConfiguration price="3500">
+                <objectChange node="platformConfig" visibilityActive="true"  visibilityInactive="false"/>
+                <objectChange node="platformHoses" visibilityActive="true"  visibilityInactive="false"/>
+                <objectChange node="platformCollision01" compoundChildActive="true"  compoundChildInactive="false"/>
+                <objectChange node="platformCollision02" compoundChildActive="true"  compoundChildInactive="false"/>
+                <objectChange node="platformCollision03" compoundChildActive="true"  compoundChildInactive="false"/>
+                <objectChange node="platformCollision04" compoundChildActive="true"  compoundChildInactive="false"/>
+                <objectChange node="platformCollision05" compoundChildActive="true"  compoundChildInactive="false"/>
+            </trailerConfiguration>
+        </trailerConfigurations>
+    </trailer>
+
+    <dischargeable>
+		<dischargeableConfigurations>
+			<dischargeableConfiguration>
+				<dischargeNode node="dischargeNodeBack" emptySpeed="500" fillUnitIndex="1" unloadInfoIndex="1" >
+					<info width="2.0" length="0.5" />
+
+					<effects>
+						<effectNode effectNode="effectGrainBack" materialType="unloading" materialTypeId="1" fadeTime="0.5" />
+						<effectNode effectNode="effectSmokeBack" materialType="unloadingSmoke" materialTypeId="1" fadeTime="0.5" />
+					</effects>
+				</dischargeNode>
+			</dischargeableConfiguration>
+			<!-- config autoload -->
+			<dischargeableConfiguration />
+		</dischargeableConfigurations>
+    </dischargeable>
+
+    <tipOccluder>
+        <occlusionArea start="tipOcclusionAreaStart" width="tipOcclusionAreaWidth" height="tipOcclusionAreaHeight" />
+    </tipOccluder>
+
+    <foliageBending>
+        <bendingNode minX="-1.05" maxX="1.05" minZ="-1.3" maxZ="1.7" yOffset="0.95" />
+    </foliageBending>
+
+    <baseMaterial>
+        <material name="unitrac112Platform_mat" baseNode="unitrac112platform_vis">
+            <shaderParameter name="colorMat3" value="LINDNER_RED1"/>
+        </material>
+        <material name="unitrac112PlatformAlpha_mat" baseNode="unitrac112platformAlpha">
+            <shaderParameter name="colorMat0" value="LINDNER_RED1" material="0"/>
+            <shaderParameter name="colorMat1" value="LINDNER_RED1" material="0"/>
+            <shaderParameter name="colorMat2" value="LINDNER_RED1" material="0"/>
+            <shaderParameter name="colorMat3" value="LINDNER_RED1" material="0"/>
+            <shaderParameter name="colorMat4" value="LINDNER_RED1" material="0"/>
+            <shaderParameter name="colorMat5" value="LINDNER_RED1" material="0"/>
+            <shaderParameter name="colorMat6" value="LINDNER_RED1" material="0"/>
+            <shaderParameter name="colorMat7" value="LINDNER_RED1" material="0"/>
+        </material>
+        <material name="unitrac122LDriveRearHitch_mat" baseNode="bumper_vis">
+            <shaderParameter name="colorMat1" value="LINDNER_RED1"/>
+        </material>
+        <material name="ptoCenterMount_mat" baseNode="ptoCenterMount">
+            <shaderParameter name="colorMat0" value="LINDNER_RED1"/>
+        </material>
+    </baseMaterial>
+
+    <baseMaterialConfigurations>
+        <baseMaterialConfiguration color="LINDNER_RED1" name="RED" price="0"/>
+        <baseMaterialConfiguration color="1.0000 0.1845 0.0021 0" name="ORANGE" price="150"/>
+        <material name="unitrac112Platform_mat" shaderParameter="colorMat3" />
+        <material name="unitrac112PlatformAlpha_mat" shaderParameter="colorMat0" />
+        <material name="unitrac112PlatformAlpha_mat" shaderParameter="colorMat1" />
+        <material name="unitrac112PlatformAlpha_mat" shaderParameter="colorMat2" />
+        <material name="unitrac112PlatformAlpha_mat" shaderParameter="colorMat3" />
+        <material name="unitrac112PlatformAlpha_mat" shaderParameter="colorMat4" />
+        <material name="unitrac112PlatformAlpha_mat" shaderParameter="colorMat5" />
+        <material name="unitrac112PlatformAlpha_mat" shaderParameter="colorMat6" />
+        <material name="unitrac112PlatformAlpha_mat" shaderParameter="colorMat7" />
+        <material name="unitrac122LDriveRearHitch_mat" shaderParameter="colorMat1" />
+        <material name="ptoCenterMount_mat" shaderParameter="colorMat0" />
+    </baseMaterialConfigurations>
+
+    <ai>
+        <agentAttachment width="2.2" height="2.5" length="3" lengthOffset="0.15"/>
+    </ai>
+
+    <wearable wearDuration="480" workMultiplier="5" fieldMultiplier="2"/>
+    <washable dirtDuration="90" washDuration="1" workMultiplier="4" fieldMultiplier="2"/>
+
+    <i3dMappings>
+        <i3dMapping id="unitrac112Platform_main_component1" node="0>" />
+        <i3dMapping id="unitrac112platform_vis" node="0>0" />
+        <i3dMapping id="supportArms" node="0>0|0|0|0" />
+        <i3dMapping id="supportArmsLower" node="0>0|0|0|0|0" />
+        <i3dMapping id="supportCol01" node="0>0|0|0|0|0|0|0" />
+        <i3dMapping id="supportCol02" node="0>0|0|0|0|0|1|0" />
+        <i3dMapping id="supportCol03" node="0>0|0|0|0|0|2|0" />
+        <i3dMapping id="supportHandle01" node="0>0|0|0|0|1" />
+        <i3dMapping id="supportHandle02" node="0>0|0|0|0|2" />
+        <i3dMapping id="supportHandle03" node="0>0|0|0|0|3" />
+        <i3dMapping id="supportHandle04" node="0>0|0|0|0|4" />
+        <i3dMapping id="moduleJoint" node="0>0|0|1" />
+        <i3dMapping id="workLightBackLow" node="0>0|1|0" />
+        <i3dMapping id="workLightBackHigh" node="0>0|1|1" />
+        <i3dMapping id="backLightsHigh1" node="0>0|1|2|0" />
+        <i3dMapping id="turnLightLeftBack" node="0>0|1|3|0" />
+        <i3dMapping id="turnLightRightBack" node="0>0|1|3|1" />
+        <i3dMapping id="tipOcclusionAreaStart" node="0>0|2|0" />
+        <i3dMapping id="tipOcclusionAreaWidth" node="0>0|2|1" />
+        <i3dMapping id="tipOcclusionAreaHeight" node="0>0|2|2" />
+        <i3dMapping id="attacherJointConfig" node="0>0|3|0" />
+        <i3dMapping id="redRound_03" node="0>0|3|0|0|0" />
+        <i3dMapping id="redRound_02" node="0>0|3|0|0|1" />
+        <i3dMapping id="beaconLight" node="0>0|3|0|0|2" />
+        <i3dMapping id="worklightBackStatic" node="0>0|3|0|0|3|0" />
+        <i3dMapping id="reverseLightStatic" node="0>0|3|0|0|3|1" />
+        <i3dMapping id="backlightStatic" node="0>0|3|0|0|3|2" />
+        <i3dMapping id="turnlightRightStatic2" node="0>0|3|0|0|3|3" />
+        <i3dMapping id="turnlightLeftStatic2" node="0>0|3|0|0|3|6" />
+        <i3dMapping id="beacon_static" node="0>0|3|0|0|4|0" />
+        <i3dMapping id="realLight01" node="0>0|3|0|0|4|1" />
+        <i3dMapping id="attacherJointBackRot" node="0>0|3|0|1|0" />
+        <i3dMapping id="attacherJointBackRot2" node="0>0|3|0|1|0|0" />
+        <i3dMapping id="attacherJointBack" node="0>0|3|0|1|0|0|0" />
+        <i3dMapping id="attacherJointBackArmBottom" node="0>0|3|0|1|1" />
+        <i3dMapping id="bottomLink" node="0>0|3|0|1|1|0" />
+        <i3dMapping id="referencePointBackBottom" node="0>0|3|0|1|1|0|0" />
+        <i3dMapping id="bottomLinkHydraulicRef" node="0>0|3|0|1|1|0|2" />
+        <i3dMapping id="attacherJointBackArmTop" node="0>0|3|0|1|2" />
+        <i3dMapping id="bottomLinkHydraulic" node="0>0|3|0|1|3" />
+        <i3dMapping id="bottomLinkHydraulicPunch" node="0>0|3|0|1|3|0" />
+        <i3dMapping id="backElectric02" node="0>0|3|0|1|4|0" />
+        <i3dMapping id="hydraulicOut09" node="0>0|3|0|1|4|1" />
+        <i3dMapping id="hydraulicIn09" node="0>0|3|0|1|4|2" />
+        <i3dMapping id="hydraulicOut08" node="0>0|3|0|1|4|3" />
+        <i3dMapping id="hydraulicIn08" node="0>0|3|0|1|4|4" />
+        <i3dMapping id="air_red" node="0>0|3|0|1|4|5" />
+        <i3dMapping id="air_yellow" node="0>0|3|0|1|4|6" />
+        <i3dMapping id="ptoBack" node="0>0|3|0|1|5|0" />
+        <i3dMapping id="ptoInput" node="0>0|3|0|1|5|1" />
+        <i3dMapping id="ptoLocalStart" node="0>0|3|0|1|5|2" />
+        <i3dMapping id="ptoLocalEnd" node="0>0|3|0|1|5|2|0" />
+        <i3dMapping id="bumper_vis" node="0>0|3|0|2|0" />
+        <i3dMapping id="additionalHoses" node="0>0|3|0|2|4" />
+        <i3dMapping id="ptoCenterMount" node="0>0|3|0|2|5" />
+        <i3dMapping id="bumperCollision" node="0>0|3|0|3" />
+        <i3dMapping id="platformConfig" node="0>0|3|1" />
+        <i3dMapping id="platform" node="0>0|3|1|0|0" />
+        <i3dMapping id="fillVolume" node="0>0|3|1|0|0|0|0" />
+        <i3dMapping id="exactFillRootNode" node="0>0|3|1|0|0|0|1" />
+        <i3dMapping id="autoAimTargetNode" node="0>0|3|1|0|0|0|2" />
+        <i3dMapping id="unloadInfo" node="0>0|3|1|0|0|0|3" />
+        <i3dMapping id="effectNodesBack" node="0>0|3|1|0|0|0|4" />
+        <i3dMapping id="effectGrainBack" node="0>0|3|1|0|0|0|4|0" />
+        <i3dMapping id="effectSmokeBack" node="0>0|3|1|0|0|0|4|1" />
+        <i3dMapping id="effectJointAnim" node="0>0|3|1|0|0|0|4|3" />
+        <i3dMapping id="tensionBelts" node="0>0|3|1|0|0|1" />
+        <i3dMapping id="beltStart1" node="0>0|3|1|0|0|1|0" />
+        <i3dMapping id="beltEnd1" node="0>0|3|1|0|0|1|0|0" />
+        <i3dMapping id="beltStart2" node="0>0|3|1|0|0|1|1" />
+        <i3dMapping id="beltEnd2" node="0>0|3|1|0|0|1|1|0" />
+        <i3dMapping id="beltActivationTrigger" node="0>0|3|1|0|0|1|2" />
+        <i3dMapping id="doorLeft" node="0>0|3|1|0|0|2" />
+        <i3dMapping id="platformCollision03" node="0>0|3|1|0|0|2|1" />
+        <i3dMapping id="doorRight" node="0>0|3|1|0|0|3" />
+        <i3dMapping id="platformCollision04" node="0>0|3|1|0|0|3|1" />
+        <i3dMapping id="doorBack" node="0>0|3|1|0|0|4" />
+        <i3dMapping id="platformCollision05" node="0>0|3|1|0|0|4|1" />
+        <i3dMapping id="doorBackHook01" node="0>0|3|1|0|0|5" />
+        <i3dMapping id="doorBackHook02" node="0>0|3|1|0|0|5|0" />
+        <i3dMapping id="platformHydraulicRef" node="0>0|3|1|0|0|6" />
+        <i3dMapping id="unitrac112platformAlpha" node="0>0|3|1|0|0|7|0" />
+        <i3dMapping id="platformCollision01" node="0>0|3|1|0|0|8|0" />
+        <i3dMapping id="platformCollision02" node="0>0|3|1|0|0|8|1" />
+        <i3dMapping id="platformHydraulic01" node="0>0|3|1|0|1" />
+        <i3dMapping id="platformHydraulic02" node="0>0|3|1|0|1|0" />
+        <i3dMapping id="platformHydraulic03" node="0>0|3|1|0|1|0|0" />
+        <i3dMapping id="platformHydraulic04" node="0>0|3|1|0|1|0|0|0" />
+        <i3dMapping id="platformHydraulic05" node="0>0|3|1|0|1|0|0|0|0" />
+        <i3dMapping id="dischargeNodeBack" node="0>0|3|1|0|2" />
+        <i3dMapping id="platformHoses" node="0>1|0" />
+        <i3dMapping id="pickupTriggerLeft" node="0>3|0" />
+        <i3dMapping id="pickupTriggerRight" node="0>3|1" />
+        <i3dMapping id="triggerNode" node="0>3|2" />
+        <i3dMapping id="loadingBase" node="0>3|3" />
+    </i3dMappings>
+</vehicle>
