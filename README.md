@@ -1,4 +1,4 @@
-# FS22_unitrac122LDrivePlatformAutoload v1.0.0.1
+# FS22_unitrac122LDrivePlatformAutoload v1.0.0.0
 Mod for Farming Simulator 22 
 
 #### Description
@@ -18,5 +18,5 @@ _%\Documents\My Games\FarmingSimulator2022\mods_ directory
 #### Installation ModHub:
 * download [Pallet Autoload Specialization (Achimobil)](https://www.farming-simulator.com/mod.php?lang=en&mod_id=228819&title=fs2022) and  
 [Lindner Unitrac Pack (GIANTS Software)](https://www.farming-simulator.com/mod.php?lang=en&mod_id=239534&title=fs2022) and  
-[Lindner Unitrac Platform Autoload (johnwayne1930)]() from the ingame Modhub
+[Lindner Unitrac Platform Autoload (johnwayne1930)](https://www.farming-simulator.com/mod.php?lang=en&mod_id=240104&title=fs2022) from the ingame Modhub
 * activate all three mods ingame
