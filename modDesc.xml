@@ -2,7 +2,7 @@
 <modDesc descVersion="64">
 
     <author>johnwayne1930</author>
-    <version>1.0.0.1</version>
+    <version>1.0.0.0</version>
 	
     <title>
         <en>Lindner Unitrac Platform Autoload</en>
@@ -17,12 +17,6 @@ Lindner Unitrac Pack is also mandatory!
 
 Price: 2,500€
 Capacity: 2000l (config without autoload)
-
-Changelog:
-1.0.0.1
-- file optimization
-- minor i3D adjustments
-
 ]]></en>
         <de><![CDATA[
 Unitrac 122 LDrive Plattform mit Autoloader für Paletten, Rund- und Quaderballen:
@@ -32,10 +26,6 @@ Lindner Unitrac Pack wird ebenfalls zwingend benötigt!
 Preis: 2.500€
 Kapazität: 2000l (Konfiguration ohne Autoloader)
 
-Changelog:
-1.0.0.1
-- Dateioptimierung
-- Kleinere i3D Anpassungen 
 ]]></de>
     </description>
 	
