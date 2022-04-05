@@ -10,13 +10,13 @@ Lindner Unitrac Pack is also mandatory!
 * download [Latest release](https://github.com/johnwayne1930/FS22_unitrac122LDrivePlatformAutoload/releases/latest)
 * put the ZIP file "FS22_unitrac122LDrivePlatformAutoload.zip" in the  
 _%\Documents\My Games\FarmingSimulator2022\mods_ directory
-* download the mandatory [Pallet Autoload Specialization (Achimobil)](https://www.farming-simulator.com/mod.php?lang=en&mod_id=228819&title=fs2022) and 
-[Lindner Unitrac Pack (GIANTS SOFTWARE)](https://www.farming-simulator.com/mod.php?lang=en&mod_id=239534&title=fs2022)
+* download the mandatory [Pallet Autoload Specialization (Achimobil)](https://farming-simulator.com/mod.php?mod_id=228819) and 
+[Lindner Unitrac Pack (GIANTS SOFTWARE)](https://farming-simulator.com/mod.php?mod_id=239534)
 * put the "FS22_aPalletAutoLoader.zip" and "FS22_lindnerUnitrac122LDrive.zip" in the mods directory as well (do not rename the ZIP!)
 * activate both mods ingame
 
 #### Installation ModHub:
-* download [Pallet Autoload Specialization (Achimobil)](https://www.farming-simulator.com/mod.php?lang=en&mod_id=228819&title=fs2022) and  
-[Lindner Unitrac Pack (GIANTS Software)](https://www.farming-simulator.com/mod.php?lang=en&mod_id=239534&title=fs2022) and  
-[Lindner Unitrac Platform Autoload (johnwayne1930)](https://www.farming-simulator.com/mod.php?lang=en&mod_id=240104&title=fs2022) from the ingame Modhub
+* download [Pallet Autoload Specialization (Achimobil)](https://farming-simulator.com/mod.php?mod_id=228819) and  
+[Lindner Unitrac Pack (GIANTS Software)](https://farming-simulator.com/mod.php?mod_id=239534) and  
+[Lindner Unitrac Platform Autoload (johnwayne1930)](https://farming-simulator.com/mod.php?mod_id=240104) from the ingame Modhub
 * activate all three mods ingame
