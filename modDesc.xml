@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<modDesc descVersion="64">
+<modDesc descVersion="65">
 
     <author>johnwayne1930</author>
-    <version>1.0.0.0</version>
+    <version>1.0.1.0</version>
 	
     <title>
         <en>Lindner Unitrac Platform Autoload</en>
@@ -17,6 +17,16 @@ Lindner Unitrac Pack is also mandatory!
 
 Price: 2,500€
 Capacity: 2000l (config without autoload)
+
+Changelog:
+1.0.1.0
+- update descVersion
+- added two more tension belts
+- fixed bulk loading in non-AL configurations
+- removed configuration option for automatic/manually tension belts as it is now a function in FS22_aPalletAutoLoader v1.7.1.0
+It is advised to sell and rebuy existing AL-platforms to prevent errors to occur
+Automatic tension belts if disabled can be enabled using key assignment defined in FS22_aPalletAutoLoader v1.7.1.0
+- added configuration option for bale loading support on/off
 ]]></en>
         <de><![CDATA[
 Unitrac 122 LDrive Plattform mit Autoloader für Paletten, Rund- und Quaderballen:
@@ -26,6 +36,15 @@ Lindner Unitrac Pack wird ebenfalls zwingend benötigt!
 Preis: 2.500€
 Kapazität: 2000l (Konfiguration ohne Autoloader)
 
+Changelog:
+1.0.1.0
+- Update descVersion
+- Zwei weitere Spanngurte hinzugefügt
+- Schüttgutbeladung in nicht-AL Konfigurationen repariert
+- Konfigurationsoption für automatische/manuelle Spanngurte entfernt da dies nun als Funktion in FS22_aPalletAutoLoader v1.7.1.0 integriert ist
+Es wird empfohlen die existierenden AL-Plattformen zu verkaufen neu zu kaufen um das auftreten von Fehlern zu vermeiden
+Wenn die automatischen Spanngurte noch deaktiviert sind können diese mit der in FS22_aPalletAutoLoader v1.7.1.0 definierten Tastenbelegung aktiviert werden
+- Konfigurationsoption für Ballenladeunterstützung An/Aus hinzugefügt
 ]]></de>
     </description>
 	
@@ -111,16 +130,16 @@ Kapazität: 2000l (Konfiguration ohne Autoloader)
             <tr>Yalnızca 3 Noktalı Ek Parça</tr>
         </text>		
 		<text name="configuration_aPalletAutoloader_active">
-			<en>AL: Tension belts</en>
-			<de>AL: Spanngurte</de>
+			<en>AL: Bale loading</en>
+			<de>AL: Ballen laden</de>
 		</text>
-		<text name="configuration_tensionBelt_on">
-			<en>Automatic</en>
-			<de>Automatisch</de>
+		<text name="configuration_bales_on">
+			<en>On</en>
+			<de>Ein</de>
 		</text>
-		<text name="configuration_tensionBelt_off">
-			<en>Manually</en>
-			<de>Manuell</de>
+		<text name="configuration_bales_off">
+			<en>Off</en>
+			<de>Aus</de>
 		</text>
      </l10n>
 	 
