@@ -42,7 +42,7 @@
             <configuration name="tensionBelts"       index="2" />
             <configuration name="fillUnit"           index="1" />
             <configuration name="fillVolume"         index="1" />
-            <configuration name="trailer"            index="3" />
+            <configuration name="trailer"            index="2" />
             <configuration name="folding"            index="2" />
             <configuration name="dischargeable"      index="2" />            
 			<!-- <configuration name="aPalletAutoLoader"  index="1" /> -->
@@ -54,7 +54,7 @@
             <configuration name="tensionBelts"       index="2" />
             <configuration name="fillUnit"           index="1" />
             <configuration name="fillVolume"         index="1" />
-            <configuration name="trailer"            index="3" />
+            <configuration name="trailer"            index="2" />
             <configuration name="folding"            index="2" />
             <configuration name="dischargeable"      index="2" /> 
 			<!-- <configuration name="aPalletAutoLoader"  index="1" /> -->
@@ -96,7 +96,7 @@
 
 	<aPalletAutoLoader>
 		<aPalletAutoLoaderConfigurations title="$l10n_configuration_aPalletAutoloader_active">
-			<aPalletAutoLoaderConfiguration name="$l10n_configuration_tensionBelt_on" maxObjects="9" maxMass="9" useBales="true" useTensionBelts="true" supportedObject="data/objects/pallets">
+			<aPalletAutoLoaderConfiguration name="$l10n_configuration_bales_on" maxObjects="9" maxMass="9" useBales="true" useTensionBelts="true" supportedObject="data/objects/pallets">
 				<trigger node="triggerNode"/>
 				<pickupTriggers>
 					<pickupTrigger node="pickupTriggerLeft"/>
@@ -105,7 +105,7 @@
                 <loadArea baseNode="loadingBase" leftRightCornerOffset="0.8 0 0" lenght="2.7" width="1.6" height="2.5"/>
 			</aPalletAutoLoaderConfiguration>
 			
-			<aPalletAutoLoaderConfiguration name="$l10n_configuration_tensionBelt_off" maxObjects="9" maxMass="9" useBales="true" useTensionBelts="false" supportedObject="data/objects/pallets">
+			<aPalletAutoLoaderConfiguration name="$l10n_configuration_bales_off" maxObjects="9" maxMass="9" useBales="false" useTensionBelts="true" supportedObject="data/objects/pallets">
 				<trigger node="triggerNode"/>
 				<pickupTriggers>
 					<pickupTrigger node="pickupTriggerLeft"/>
@@ -233,6 +233,8 @@
                 <tensionBelts linkNode="tensionBelts" rootNode="unitrac112Platform_main_component1" jointNode="unitrac112Platform_main_component1" width="0.075" maxEdgeLength="0.1" geometryBias="0.01" ratchetPosition="0.2" defaultOffset="0" defaultOffsetSide="0.1" defaultHeight="3" interactionRadius="1.75" totalInteractionRadius="3.5" activationTrigger="beltActivationTrigger">
                     <tensionBelt startNode="beltStart1" endNode="beltEnd1" offsetLeft="0.85"/>
                     <tensionBelt startNode="beltStart2" endNode="beltEnd2" offsetRight="0.85"/>
+                    <tensionBelt startNode="beltStart3" endNode="beltEnd3" offsetLeft="0.85"/>
+                    <tensionBelt startNode="beltStart4" endNode="beltEnd4" offsetRight="0.85"/>
                     <sounds>
                         <addBelt    template="beltOpen" />
                         <removeBelt template="beltClose" />
@@ -421,16 +423,6 @@
                 <objectChange node="platformCollision04" compoundChildActive="true"  compoundChildInactive="false"/>
                 <objectChange node="platformCollision05" compoundChildActive="true"  compoundChildInactive="false"/>
             </trailerConfiguration>
-			<!-- config autoload -->
-            <trailerConfiguration price="3500">
-                <objectChange node="platformConfig" visibilityActive="true"  visibilityInactive="false"/>
-                <objectChange node="platformHoses" visibilityActive="true"  visibilityInactive="false"/>
-                <objectChange node="platformCollision01" compoundChildActive="true"  compoundChildInactive="false"/>
-                <objectChange node="platformCollision02" compoundChildActive="true"  compoundChildInactive="false"/>
-                <objectChange node="platformCollision03" compoundChildActive="true"  compoundChildInactive="false"/>
-                <objectChange node="platformCollision04" compoundChildActive="true"  compoundChildInactive="false"/>
-                <objectChange node="platformCollision05" compoundChildActive="true"  compoundChildInactive="false"/>
-            </trailerConfiguration>
         </trailerConfigurations>
     </trailer>
 
@@ -596,6 +588,10 @@
         <i3dMapping id="platformHydraulic05" node="0>0|3|1|0|1|0|0|0|0" />
         <i3dMapping id="dischargeNodeBack" node="0>0|3|1|0|2" />
         <i3dMapping id="platformHoses" node="0>1|0" />
+        <i3dMapping id="beltStart3" node="0>0|3|1|0|0|1|3" />
+        <i3dMapping id="beltEnd3" node="0>0|3|1|0|0|1|3|0" />
+        <i3dMapping id="beltStart4" node="0>0|3|1|0|0|1|4" />
+        <i3dMapping id="beltEnd4" node="0>0|3|1|0|0|1|4|0" />
         <i3dMapping id="pickupTriggerLeft" node="0>3|0" />
         <i3dMapping id="pickupTriggerRight" node="0>3|1" />
         <i3dMapping id="triggerNode" node="0>3|2" />
