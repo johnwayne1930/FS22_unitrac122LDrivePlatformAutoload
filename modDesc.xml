@@ -10,40 +10,36 @@
     </title>
 	
     <description>
-        <en><![CDATA[
-Unitrac 122 LDrive Platform with autoload for pallets, round- and squarebales:
+        <en><![CDATA[Unitrac 122 LDrive Platform with autoload for pallets, round- and squarebales:
 FS22 Pallet Autoloader Specialization is required to make the autoload work!
 Lindner Unitrac Pack is also mandatory!
 
-Price: 2,500€
+Price: 2,500 $
 Capacity: 2000l (config without autoload)
 
-Changelog:
-1.0.1.0
-- update descVersion
-- added two more tension belts
+Changelog 1.0.1.0:
+- Update descVersion
+- Added two more tension belts
 - fixed bulk loading in non-AL configurations
-- removed configuration option for automatic/manually tension belts as it is now a function in FS22_aPalletAutoLoader v1.7.1.0
-It is advised to sell and rebuy existing AL-platforms to prevent errors to occur
-Automatic tension belts if disabled can be enabled using key assignment defined in FS22_aPalletAutoLoader v1.7.1.0
-- added configuration option for bale loading support on/off
+- Removed configuration option for automatic/manually tension belts as it is now a function in FS22_aPalletAutoLoader v1.7.1.0.
+It is advised to sell and rebuy existing AL-platforms to prevent errors to occur.
+Automatic tension belts if disabled can be enabled using key assignment defined in FS22_aPalletAutoLoader v1.7.1.0.
+- Added configuration option for bale loading support on/off
 ]]></en>
-        <de><![CDATA[
-Unitrac 122 LDrive Plattform mit Autoloader für Paletten, Rund- und Quaderballen:
+        <de><![CDATA[Unitrac 122 LDrive Plattform mit Autoloader für Paletten, Rund- und Quaderballen:
 FS22 Paletten Autoloader Spezialisierung ist erforderlich, damit der Autoload funktioniert!
 Lindner Unitrac Pack wird ebenfalls zwingend benötigt!
 
-Preis: 2.500€
+Preis: 2.500 €
 Kapazität: 2000l (Konfiguration ohne Autoloader)
 
-Changelog:
-1.0.1.0
+Changelog 1.0.1.0:
 - Update descVersion
 - Zwei weitere Spanngurte hinzugefügt
 - Schüttgutbeladung in nicht-AL Konfigurationen repariert
-- Konfigurationsoption für automatische/manuelle Spanngurte entfernt da dies nun als Funktion in FS22_aPalletAutoLoader v1.7.1.0 integriert ist
-Es wird empfohlen die existierenden AL-Plattformen zu verkaufen neu zu kaufen um das auftreten von Fehlern zu vermeiden
-Wenn die automatischen Spanngurte noch deaktiviert sind können diese mit der in FS22_aPalletAutoLoader v1.7.1.0 definierten Tastenbelegung aktiviert werden
+- Konfigurationsoption für automatische/manuelle Spanngurte entfernt, da dies nun als Funktion in FS22_aPalletAutoLoader v1.7.1.0 integriert ist.
+Es wird empfohlen die existierenden AL-Plattformen zu verkaufen und diese neu zu kaufen, um das auftreten von Fehlern zu vermeiden.
+Wenn die automatischen Spanngurte noch deaktiviert sind, können diese mit der in FS22_aPalletAutoLoader v1.7.1.0 definierten Tastenbelegung aktiviert werden.
 - Konfigurationsoption für Ballenladeunterstützung An/Aus hinzugefügt
 ]]></de>
     </description>
