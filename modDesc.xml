@@ -19,7 +19,7 @@ Capacity: 2000l (config without autoload)
 
 Changelog:
 1.0.2.0
-- Squarebales-120 are now supported (needs FS22_aPalletAutoLoader v1.8.0.0 or higher)
+- Squarebales-120 are now supported (requires FS22_aPalletAutoLoader v1.8.0.0 or above)
 - Adjusted unloading positions
 
 1.0.1.0
