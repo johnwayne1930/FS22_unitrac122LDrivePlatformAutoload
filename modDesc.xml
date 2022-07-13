@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<modDesc descVersion="65">
+<modDesc descVersion="67">
 
     <author>johnwayne1930</author>
-    <version>1.0.1.0</version>
+    <version>1.0.2.0</version>
 	
     <title>
         <en>Lindner Unitrac Platform Autoload</en>
@@ -17,8 +17,12 @@ Lindner Unitrac Pack is also mandatory!
 Price: 2,500 $
 Capacity: 2000l (config without autoload)
 
-Changelog 1.0.1.0:
-- Update descVersion
+Changelog:
+1.0.2.0
+- Squarebales-120 are now supported (requires FS22_aPalletAutoLoader v1.8.0.0 or above)
+- Adjusted unloading positions
+
+1.0.1.0
 - Added two more tension belts
 - fixed bulk loading in non-AL configurations
 - Removed configuration option for automatic/manually tension belts as it is now a function in FS22_aPalletAutoLoader v1.7.1.0.
@@ -33,8 +37,12 @@ Lindner Unitrac Pack wird ebenfalls zwingend benötigt!
 Preis: 2.500 €
 Kapazität: 2000l (Konfiguration ohne Autoloader)
 
-Changelog 1.0.1.0:
-- Update descVersion
+Changelog:
+1.0.2.0
+- Support für Quaderballen-120 (benötigt FS22_aPalletAutoLoader v1.8.0.0 oder höher)
+- Abladepositionen angepasst
+
+1.0.1.0
 - Zwei weitere Spanngurte hinzugefügt
 - Schüttgutbeladung in nicht-AL Konfigurationen repariert
 - Konfigurationsoption für automatische/manuelle Spanngurte entfernt, da dies nun als Funktion in FS22_aPalletAutoLoader v1.7.1.0 integriert ist.
