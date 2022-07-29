@@ -96,7 +96,7 @@
 
 	<aPalletAutoLoader>
 		<aPalletAutoLoaderConfigurations title="$l10n_configuration_aPalletAutoloader_active">
-			<aPalletAutoLoaderConfiguration name="$l10n_configuration_bales_on" maxObjects="9" maxMass="9" useBales="true" useTensionBelts="true" supportedObject="data/objects/pallets" UnloadLeftOffset="2.8 -1 0" UnloadRightOffset="-2.8 -1 0" UnloadBackOffset="0 -1 -4.5">
+			<aPalletAutoLoaderConfiguration name="$l10n_configuration_bales_on" maxObjects="9" maxMass="9" useBales="true" useTensionBelts="true" usePalletWeightReduction="false" supportedObject="data/objects/pallets" UnloadLeftOffset="2.8 -1 0" UnloadRightOffset="-2.8 -1 0" UnloadBackOffset="0 -1 -4.5">
 				<trigger node="triggerNode"/>
 				<pickupTriggers>
 					<pickupTrigger node="pickupTriggerLeft"/>
@@ -108,7 +108,7 @@
                 </autoLoadObjectSettings>
 			</aPalletAutoLoaderConfiguration>
 			
-			<aPalletAutoLoaderConfiguration name="$l10n_configuration_bales_off" maxObjects="9" maxMass="9" useBales="false" useTensionBelts="true" supportedObject="data/objects/pallets" UnloadLeftOffset="2.8 -1 0" UnloadRightOffset="-2.8 -1 0" UnloadBackOffset="0 -1 -4.5">
+			<aPalletAutoLoaderConfiguration name="$l10n_configuration_bales_off" maxObjects="9" maxMass="9" useBales="false" useTensionBelts="true" usePalletWeightReduction="false" supportedObject="data/objects/pallets" UnloadLeftOffset="2.8 -1 0" UnloadRightOffset="-2.8 -1 0" UnloadBackOffset="0 -1 -4.5">
 				<trigger node="triggerNode"/>
 				<pickupTriggers>
 					<pickupTrigger node="pickupTriggerLeft"/>
