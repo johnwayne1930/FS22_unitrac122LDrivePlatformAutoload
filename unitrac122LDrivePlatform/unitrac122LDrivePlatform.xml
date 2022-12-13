@@ -8,7 +8,7 @@
             <function>$l10n_function_tipper</function>
         </functions>
         <image>unitrac122LDrivePlatform/store_unitrac122LDrivePlatform.png</image>
-        <price>2500</price>
+        <price>6000</price>
         <lifetime>600</lifetime>
         <rotation>0</rotation>
         <brand>LINDNER</brand>
@@ -96,7 +96,7 @@
 
 	<aPalletAutoLoader>
 		<aPalletAutoLoaderConfigurations title="$l10n_configuration_aPalletAutoloader_active">
-			<aPalletAutoLoaderConfiguration name="$l10n_configuration_bales_on" maxObjects="9" maxMass="9" useBales="true" useTensionBelts="true" supportedObject="data/objects/pallets" UnloadLeftOffset="2.8 -1 0" UnloadRightOffset="-2.8 -1 0" UnloadBackOffset="0 -1 -4.5">
+			<aPalletAutoLoaderConfiguration name="$l10n_configuration_bales_on" maxObjects="9" maxMass="9" useBales="true" useTensionBelts="true" usePalletWeightReduction="false" supportedObject="data/objects/pallets" UnloadLeftOffset="2.8 -1 0" UnloadRightOffset="-2.8 -1 0" UnloadBackOffset="0 -1 -4.5">
 				<trigger node="triggerNode"/>
 				<pickupTriggers>
 					<pickupTrigger node="pickupTriggerLeft"/>
@@ -104,11 +104,11 @@
 				</pickupTriggers>
                 <loadArea baseNode="loadingBase" leftRightCornerOffset="0.8 0 0" lenght="2.7" width="1.6" height="2.6"/>
 				<autoLoadObjectSettings>
-                    <autoLoadObjectSetting name="squarebale120" maxObjects="24"/>
+                    <autoLoadObjectSetting name="squarebale120" maxObjects="24" height="2"/>
                 </autoLoadObjectSettings>
 			</aPalletAutoLoaderConfiguration>
 			
-			<aPalletAutoLoaderConfiguration name="$l10n_configuration_bales_off" maxObjects="9" maxMass="9" useBales="false" useTensionBelts="true" supportedObject="data/objects/pallets" UnloadLeftOffset="2.8 -1 0" UnloadRightOffset="-2.8 -1 0" UnloadBackOffset="0 -1 -4.5">
+			<aPalletAutoLoaderConfiguration name="$l10n_configuration_bales_off" maxObjects="9" maxMass="9" useBales="false" useTensionBelts="true" usePalletWeightReduction="false" supportedObject="data/objects/pallets" UnloadLeftOffset="2.8 -1 0" UnloadRightOffset="-2.8 -1 0" UnloadBackOffset="0 -1 -4.5">
 				<trigger node="triggerNode"/>
 				<pickupTriggers>
 					<pickupTrigger node="pickupTriggerLeft"/>
@@ -408,11 +408,11 @@
 
     <trailer>
         <trailerConfigurations>
-            <trailerConfiguration>
+            <trailerConfiguration price="-3500">
                 <trailer>
                 </trailer>
             </trailerConfiguration>
-            <trailerConfiguration price="3500">
+            <trailerConfiguration price="0">
                 <trailer>
                     <tipSide name="$l10n_info_tipSideBack" dischargeNodeIndex="1">
                         <animation name="tipAnimationBack" speedScale="0.6" startTipTime="0.25"/>

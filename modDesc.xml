@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<modDesc descVersion="67">
+<modDesc descVersion="72">
 
     <author>johnwayne1930</author>
-    <version>1.0.2.0</version>
+    <version>1.0.3.0</version>
 	
     <title>
         <en>Lindner Unitrac Platform Autoload</en>
@@ -18,17 +18,15 @@ Price: 2,500 $
 Capacity: 2000l (config without autoload)
 
 Changelog:
+1.0.3.0
+- usePalletWeightReduction configuration from FS22_aPalletAutoLoader v1.8.4.1 disabled
+- Various adjustments to FS22_aPalletAutoLoader v1.8.6.0
+- RU translation added
+- Reconfigured prices that match the original and allow at least one free configuration
+
 1.0.2.0
 - Squarebales-120 are now supported (requires FS22_aPalletAutoLoader v1.8.0.0 or above)
 - Adjusted unloading positions
-
-1.0.1.0
-- Added two more tension belts
-- fixed bulk loading in non-AL configurations
-- Removed configuration option for automatic/manually tension belts as it is now a function in FS22_aPalletAutoLoader v1.7.1.0.
-It is advised to sell and rebuy existing AL-platforms to prevent errors to occur.
-Automatic tension belts if disabled can be enabled using key assignment defined in FS22_aPalletAutoLoader v1.7.1.0.
-- Added configuration option for bale loading support on/off
 ]]></en>
         <de><![CDATA[Unitrac 122 LDrive Plattform mit Autoloader für Paletten, Rund- und Quaderballen:
 FS22 Paletten Autoloader Spezialisierung ist erforderlich, damit der Autoload funktioniert!
@@ -38,17 +36,15 @@ Preis: 2.500 €
 Kapazität: 2000l (Konfiguration ohne Autoloader)
 
 Changelog:
+1.0.3.0
+- usePalletWeightReduction Konfiguration aus FS22_aPalletAutoLoader v1.8.4.1 deaktiviert
+- Verschiedene anpassungen an FS22_aPalletAutoLoader v1.8.6.0
+- RU übersetzung hinzugefügt
+- Rekonfigurierte Preise, die dem Original entsprechen und mindestens eine kostenlose Konfiguration ermöglichen
+
 1.0.2.0
 - Support für Quaderballen-120 (benötigt FS22_aPalletAutoLoader v1.8.0.0 oder höher)
 - Abladepositionen angepasst
-
-1.0.1.0
-- Zwei weitere Spanngurte hinzugefügt
-- Schüttgutbeladung in nicht-AL Konfigurationen repariert
-- Konfigurationsoption für automatische/manuelle Spanngurte entfernt, da dies nun als Funktion in FS22_aPalletAutoLoader v1.7.1.0 integriert ist.
-Es wird empfohlen die existierenden AL-Plattformen zu verkaufen und diese neu zu kaufen, um das auftreten von Fehlern zu vermeiden.
-Wenn die automatischen Spanngurte noch deaktiviert sind, können diese mit der in FS22_aPalletAutoLoader v1.7.1.0 definierten Tastenbelegung aktiviert werden.
-- Konfigurationsoption für Ballenladeunterstützung An/Aus hinzugefügt
 ]]></de>
     </description>
 	
@@ -68,6 +64,8 @@ Wenn die automatischen Spanngurte noch deaktiviert sind, können diese mit der i
         <color name="LUOND_GREEN1" value="0.009 0.202 0.02 0" />
         <color name="LUOND_RED1" value="0.8 0 0 1" />
     </brandColors>
+
+    <!-- <l10n filenamePrefix="localization/l10n"/> -->
 
      <l10n>
         <text name="configuration_valuePlatform">
@@ -136,14 +134,17 @@ Wenn die automatischen Spanngurte noch deaktiviert sind, können diese mit der i
 		<text name="configuration_aPalletAutoloader_active">
 			<en>AL: Bale loading</en>
 			<de>AL: Ballen laden</de>
+			<ru>Автопогрузка тюков</ru>
 		</text>
 		<text name="configuration_bales_on">
 			<en>On</en>
 			<de>Ein</de>
+			<ru>Вкл</ru>
 		</text>
 		<text name="configuration_bales_off">
 			<en>Off</en>
 			<de>Aus</de>
+			<ru>Выкл</ru>
 		</text>
      </l10n>
 	 
