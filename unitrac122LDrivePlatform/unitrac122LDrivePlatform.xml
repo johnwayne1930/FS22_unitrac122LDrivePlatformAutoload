@@ -8,7 +8,7 @@
             <function>$l10n_function_tipper</function>
         </functions>
         <image>unitrac122LDrivePlatform/store_unitrac122LDrivePlatform.png</image>
-        <price>2500</price>
+        <price>6000</price>
         <lifetime>600</lifetime>
         <rotation>0</rotation>
         <brand>LINDNER</brand>
@@ -408,11 +408,11 @@
 
     <trailer>
         <trailerConfigurations>
-            <trailerConfiguration>
+            <trailerConfiguration price="-3500">
                 <trailer>
                 </trailer>
             </trailerConfiguration>
-            <trailerConfiguration price="3500">
+            <trailerConfiguration price="0">
                 <trailer>
                     <tipSide name="$l10n_info_tipSideBack" dischargeNodeIndex="1">
                         <animation name="tipAnimationBack" speedScale="0.6" startTipTime="0.25"/>

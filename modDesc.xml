@@ -20,6 +20,9 @@ Capacity: 2000l (config without autoload)
 Changelog:
 1.0.3.0
 - usePalletWeightReduction configuration from FS22_aPalletAutoLoader v1.8.4.1 disabled
+- Various adjustments to FS22_aPalletAutoLoader v1.8.6.0
+- RU translation added
+- Reconfigured prices that match the original and allow at least one free configuration
 
 1.0.2.0
 - Squarebales-120 are now supported (requires FS22_aPalletAutoLoader v1.8.0.0 or above)
@@ -35,6 +38,9 @@ Kapazität: 2000l (Konfiguration ohne Autoloader)
 Changelog:
 1.0.3.0
 - usePalletWeightReduction Konfiguration aus FS22_aPalletAutoLoader v1.8.4.1 deaktiviert
+- Verschiedene anpassungen an FS22_aPalletAutoLoader v1.8.6.0
+- RU übersetzung hinzugefügt
+- Rekonfigurierte Preise, die dem Original entsprechen und mindestens eine kostenlose Konfiguration ermöglichen
 
 1.0.2.0
 - Support für Quaderballen-120 (benötigt FS22_aPalletAutoLoader v1.8.0.0 oder höher)
